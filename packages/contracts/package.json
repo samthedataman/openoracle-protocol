@@ -1,7 +1,7 @@
 {
-  "name": "pollypoll-contracts",
+  "name": "openoracle-contracts",
   "version": "1.0.0",
-  "description": "Smart contracts for PollyPoll prediction markets on Flow EVM",
+  "description": "Smart contracts for OpenOracle Protocol - extensible oracle routing and monetization",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
