@@ -1,0 +1,7 @@
+{
+  "network": "baseMainnet",
+  "polyPoll": "0x0a431f6851f4F724dF4024CB5415BBaEDc7869B4",
+  "feeRecipient": "0x87aC324D24a2EE59456321c37C3560A824f375B3",
+  "deployedAt": "2025-08-17T02:44:28.583Z",
+  "deployer": "0x87aC324D24a2EE59456321c37C3560A824f375B3"
+}

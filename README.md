@@ -97,6 +97,23 @@ priceStream.on('price', (data) => {
 npm install openoracle-react-sdk
 ```
 
+### ⛓️ Smart Contracts
+```bash
+# Clone and install
+git clone https://github.com/samthedataman/openoracle-protocol.git
+cd openoracle-protocol/packages/contracts
+npm install
+
+# Compile contracts
+npm run compile
+
+# Deploy to testnet
+npm run deploy:testnet
+
+# Run local blockchain
+npm run node
+```
+
 ```tsx
 import { useOracle, OracleProvider } from 'openoracle-react-sdk'
 
@@ -128,15 +145,16 @@ function PredictionMarket() {
 
 ---
 
-## 📦 SDK Overview
+## 📦 Package Overview
 
-OpenOracle provides three production-ready SDKs for building oracle-powered applications:
+OpenOracle provides a complete development stack for building oracle-powered applications:
 
-| SDK | Language | Package | Use Cases | Status |
-|-----|----------|---------|-----------|--------|
+| Package | Language | Package/Contract | Use Cases | Status |
+|---------|----------|------------------|-----------|--------|
 | **[Python SDK](./packages/python-sdk/)** | Python 3.9+ | [`openoracle`](https://pypi.org/project/openoracle/) | Backend services, ML pipelines, data analysis | ✅ Published |
 | **[Node.js SDK](./packages/node-sdk/)** | TypeScript/JavaScript | [`openoracle-sdk-js`](https://www.npmjs.com/package/openoracle-sdk-js) | APIs, serverless, microservices | ✅ Published |
 | **[React SDK](./packages/react-sdk/)** | React/TypeScript | [`openoracle-react-sdk`](https://www.npmjs.com/package/openoracle-react-sdk) | dApps, prediction UIs, dashboards | ✅ Published |
+| **[Smart Contracts](./packages/contracts/)** | Solidity | Flow EVM, Ethereum | On-chain oracle monetization, prediction markets | 🚧 Development |
 
 ### 🎯 Cross-Platform Features
 

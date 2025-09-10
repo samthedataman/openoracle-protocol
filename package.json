@@ -6,19 +6,22 @@
   "workspaces": [
     "packages/python-sdk",
     "packages/node-sdk", 
-    "packages/react-sdk"
+    "packages/react-sdk",
+    "packages/contracts"
   ],
   "scripts": {
     "install:all": "npm install && npm run install:python",
     "install:python": "cd packages/python-sdk && pip install -e .",
-    "build": "npm run build:node && npm run build:react",
+    "build": "npm run build:node && npm run build:react && npm run build:contracts",
     "build:node": "cd packages/node-sdk && npm run build",
     "build:react": "cd packages/react-sdk && npm run build", 
     "build:python": "cd packages/python-sdk && python -m build",
-    "test": "npm run test:node && npm run test:react && npm run test:python",
+    "build:contracts": "cd packages/contracts && npm run compile",
+    "test": "npm run test:node && npm run test:react && npm run test:python && npm run test:contracts",
     "test:node": "cd packages/node-sdk && npm test",
     "test:react": "cd packages/react-sdk && npm test",
     "test:python": "cd packages/python-sdk && python -m pytest",
+    "test:contracts": "cd packages/contracts && npm test",
     "lint": "npm run lint:node && npm run lint:react",
     "lint:node": "cd packages/node-sdk && npm run lint",
     "lint:react": "cd packages/react-sdk && npm run lint",
@@ -27,9 +30,12 @@
     "publish:node": "cd packages/node-sdk && npm publish",
     "publish:react": "cd packages/react-sdk && npm publish",
     "clean": "rm -rf packages/*/node_modules packages/*/dist packages/*/build",
-    "dev": "concurrently \"npm run dev:node\" \"npm run dev:react\"",
+    "dev": "concurrently \"npm run dev:node\" \"npm run dev:react\" \"npm run dev:contracts\"",
     "dev:node": "cd packages/node-sdk && npm run dev",
-    "dev:react": "cd packages/react-sdk && npm run dev"
+    "dev:react": "cd packages/react-sdk && npm run dev",
+    "dev:contracts": "cd packages/contracts && npm run node",
+    "deploy:contracts": "cd packages/contracts && npm run deploy",
+    "deploy:testnet": "cd packages/contracts && npm run deploy:testnet"
   },
   "keywords": [
     "oracle",

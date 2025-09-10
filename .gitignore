@@ -143,3 +143,10 @@ ENV/
 # Temporary files
 tmp/
 temp/
+
+# Hardhat/Smart Contracts
+packages/contracts/cache/
+packages/contracts/artifacts/
+packages/contracts/node_modules/
+packages/contracts/.env
+packages/contracts/.DS_Store
