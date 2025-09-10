@@ -1,0 +1,102 @@
+{
+  "name": "openoracle-sdk-js",
+  "version": "1.0.1",
+  "description": "OpenOracle Node.js SDK - Intelligent Oracle Routing with Multiple LLM Providers",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "openoracle": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build && npm run build:cli",
+    "build:cli": "vite build --config vite.cli.config.ts",
+    "build:types": "tsc --emitDeclarationOnly",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext ts --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext ts --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "oracle",
+    "blockchain", 
+    "prediction-markets",
+    "defi",
+    "chainlink",
+    "pyth",
+    "uma",
+    "api3",
+    "band-protocol",
+    "ai",
+    "routing",
+    "twitter",
+    "social-media",
+    "typescript",
+    "nodejs"
+  ],
+  "author": "OpenOracle Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openoracle/openoracle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openoracle/openoracle/issues"
+  },
+  "homepage": "https://github.com/openoracle/openoracle#readme",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "ethers": "^6.11.0",
+    "ws": "^8.16.0",
+    "mqtt": "^5.3.0",
+    "dotenv": "^16.4.0",
+    "node-cache": "^5.1.0",
+    "retry": "^0.13.0",
+    "winston": "^3.11.0",
+    "jsonwebtoken": "^9.0.0",
+    "crypto": "^1.0.1",
+    "date-fns": "^3.6.0",
+    "decimal.js": "^10.4.0",
+    "lodash": "^4.17.21",
+    "openai": "^4.28.0",
+    "socket.io-client": "^4.7.0",
+    "yargs": "^17.7.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "boxen": "^5.1.2",
+    "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/ws": "^8.5.0",
+    "@types/jsonwebtoken": "^9.0.0",
+    "@types/lodash": "^4.14.0",
+    "@types/yargs": "^17.0.0",
+    "@types/inquirer": "^8.2.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.7.3",
+    "vite-plugin-node": "^3.1.0",
+    "rollup-plugin-visualizer": "^5.12.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "openoracle-monorepo",
+  "version": "1.0.0",
+  "description": "OpenOracle - Intelligent Oracle Routing for Prediction Markets",
+  "private": true,
+  "workspaces": [
+    "packages/python-sdk",
+    "packages/node-sdk", 
+    "packages/react-sdk"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:python",
+    "install:python": "cd packages/python-sdk && pip install -e .",
+    "build": "npm run build:node && npm run build:react",
+    "build:node": "cd packages/node-sdk && npm run build",
+    "build:react": "cd packages/react-sdk && npm run build", 
+    "build:python": "cd packages/python-sdk && python -m build",
+    "test": "npm run test:node && npm run test:react && npm run test:python",
+    "test:node": "cd packages/node-sdk && npm test",
+    "test:react": "cd packages/react-sdk && npm test",
+    "test:python": "cd packages/python-sdk && python -m pytest",
+    "lint": "npm run lint:node && npm run lint:react",
+    "lint:node": "cd packages/node-sdk && npm run lint",
+    "lint:react": "cd packages/react-sdk && npm run lint",
+    "publish:all": "npm run publish:python && npm run publish:node && npm run publish:react",
+    "publish:python": "cd packages/python-sdk && python -m twine upload dist/*",
+    "publish:node": "cd packages/node-sdk && npm publish",
+    "publish:react": "cd packages/react-sdk && npm publish",
+    "clean": "rm -rf packages/*/node_modules packages/*/dist packages/*/build",
+    "dev": "concurrently \"npm run dev:node\" \"npm run dev:react\"",
+    "dev:node": "cd packages/node-sdk && npm run dev",
+    "dev:react": "cd packages/react-sdk && npm run dev"
+  },
+  "keywords": [
+    "oracle",
+    "blockchain",
+    "prediction-markets",
+    "defi",
+    "ai",
+    "routing",
+    "typescript",
+    "python",
+    "react"
+  ],
+  "author": "OpenOracle Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openoracle/openoracle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openoracle/openoracle/issues"
+  },
+  "homepage": "https://github.com/openoracle/openoracle#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "lerna": "^8.0.0",
+    "@changesets/cli": "^2.27.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
