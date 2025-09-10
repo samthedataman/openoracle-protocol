@@ -46,12 +46,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/samsavage/openoracle-protocol.git"
+    "url": "https://github.com/samthedataman/openoracle-protocol.git"
   },
   "bugs": {
-    "url": "https://github.com/samsavage/openoracle-protocol/issues"
+    "url": "https://github.com/samthedataman/openoracle-protocol/issues"
   },
-  "homepage": "https://github.com/samsavage/openoracle-protocol#readme",
+  "homepage": "https://github.com/samthedataman/openoracle-protocol#readme",
   "devDependencies": {
     "concurrently": "^8.2.0",
     "lerna": "^8.0.0",
